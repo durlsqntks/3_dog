@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="animation"></div>
+        <div class="btn">
+            <a href="#">walking</a>
+            <a href="#">stop</a>
+        </div>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        // $('누구').이벤트(할일);
+        $('.btn a').click(function()
+        {
+            var text = $(this).text(); //$(this)는 클릭한 a를 잡아준다.
+            console.log(text);
+            $('#animation').removeClass().addClass(text); 
+            //변수 text에 들어온 문자를 클래스명으로 적용함
+            //removerClass() > 모든 클래스명 삭제
+            //addClass(뿡빵) > 뿡빵을 클래스명으로 추가
+        });
+    </script>
+</body>
+</html>
